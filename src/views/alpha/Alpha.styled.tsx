@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Alpha = styled.div`
     width: 100vw;
@@ -12,4 +12,4 @@ export const Alpha = styled.div`
     left: 0;
     display: block;
     z-index: 1;
-`
+`;

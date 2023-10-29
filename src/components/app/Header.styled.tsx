@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Header = styled.div`
     width: auto;
@@ -12,4 +12,4 @@ export const Header = styled.div`
     top: 0;
     right: 0;
     z-index: 100;
-`
+`;

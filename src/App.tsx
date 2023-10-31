@@ -1,10 +1,9 @@
 import React, { type FC, useEffect } from 'react';
 import './styles/reset.css';
 import './styles/global.css';
-import { App as StyledApp } from './App.styled';
-
 import { Header } from './components/app/Header';
 import { Alpha } from './views/alpha/Alpha';
+import { App as StyledApp } from './App.styled';
 
 const App: FC = () => {
   useEffect(() => {
@@ -12,10 +11,11 @@ const App: FC = () => {
   }, []);
 
   return (
-  <StyledApp>
-    <Header />
-    <Alpha />
-  </StyledApp>);
+    <StyledApp>
+      <Header />
+      <Alpha />
+    </StyledApp>
+  );
 };
 
 export default App;

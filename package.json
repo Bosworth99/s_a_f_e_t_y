@@ -18,7 +18,7 @@
     "react-dom": "^18.2.0",
     "styled-components": "^6.1.0",
     "three": "^0.158.0",
-    "typescript": "*"
+    "typescript": "^4.5.5"
   },
   "scripts": {
     "start": "webpack serve --open",
@@ -36,6 +36,7 @@
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.33.2",
+    "prettier": "^3.0.3",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.5.0",
     "webpack": "^5.89.0",

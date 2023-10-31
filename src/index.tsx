@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 
-(function construct (): void {
+(function construct(): void {
   const container = document.getElementById('root');
   if (container !== null) {
     const root = createRoot(container);

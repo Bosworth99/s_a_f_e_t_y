@@ -1,4 +1,5 @@
 import React, { type FC, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import './styles/reset.css';
 import './styles/global.css';
 import { Header } from './components/app/Header';
@@ -10,9 +11,11 @@ const App: FC = () => {
     console.log('hello world');
   }, []);
 
+  const overlay: Element = document.getElementById('overlay') as Element;
+
   return (
     <StyledApp>
-      <Header />
+      {createPortal(<Header />, overlay)}
       <Alpha />
     </StyledApp>
   );

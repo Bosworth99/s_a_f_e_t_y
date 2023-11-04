@@ -8,3 +8,10 @@ export const App = styled.div`
   background-color: #000000;
   color: #ddd;
 `;
+
+export const ViewContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  inset: 0 0 0 0;
+`;

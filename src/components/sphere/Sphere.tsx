@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useFrame, extend } from '@react-three/fiber';
 import * as THREE from 'three';
 
-extend({ THREE });
+// https://codesandbox.io/s/brnsm?file=/src/App.tsx
 
 export const Sphere = (props: JSX.IntrinsicElements['mesh']) => {
   // This reference will give us direct access to the THREE.Mesh object
@@ -26,7 +26,7 @@ export const Sphere = (props: JSX.IntrinsicElements['mesh']) => {
       onPointerOut={(event) => hover(false)}
     >
       <boxGeometry args={[1, 2, 1]} />
-      <meshPhongMaterial color={hovered ? 'red' : 'black'} />
+      <meshPhongMaterial color={hovered ? 'red' : 'blue'} />
     </mesh>
   );
 };

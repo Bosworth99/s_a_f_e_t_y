@@ -1,29 +1,32 @@
 import React, { useRef, useState } from 'react';
-import { ThreeElements, useFrame, extend } from '@react-three/fiber';
+import { useFrame, extend } from '@react-three/fiber';
 import * as THREE from 'three';
 
 extend({ THREE });
 
-// interface SphereProps {
-//   texture?: string;
-// }
+export const Sphere = (props: JSX.IntrinsicElements['mesh']) => {
+  // This reference will give us direct access to the THREE.Mesh object
+  const ref = useRef<THREE.Mesh>(null!);
+  // Hold state for hovered and clicked events
+  const [hovered, hover] = useState(false);
+  const [clicked, click] = useState(false);
+  // Rotate mesh every frame, this is outside of React without overhead
+  useFrame((state, delta) => {
+    ref.current.rotation.x += 0.01;
+    ref.current.rotation.y += 0.01;
+  });
 
-export const Sphere = (props: ThreeElements['mesh']) => {
-  const meshRef = useRef<THREE.Mesh>(null!);
-  const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false);
-  useFrame((state, delta) => (meshRef.current.rotation.x += delta));
   return (
     <mesh
       {...props}
-      ref={meshRef}
-      scale={active ? 1 : 0.9}
-      onClick={(event) => setActive(!active)}
-      onPointerOver={(event) => setHover(true)}
-      onPointerOut={(event) => setHover(false)}
+      ref={ref}
+      scale={clicked ? 1.5 : 1}
+      onClick={(event) => click(!clicked)}
+      onPointerOver={(event) => hover(true)}
+      onPointerOut={(event) => hover(false)}
     >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
+      <boxGeometry args={[1, 2, 1]} />
+      <meshPhongMaterial color={hovered ? 'red' : 'black'} />
     </mesh>
   );
 };

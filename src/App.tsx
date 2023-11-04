@@ -5,8 +5,7 @@ import {
   ViewContainer as StyledViewContainer,
 } from './App.styled';
 import { Alpha } from './views/alpha/Alpha';
-import { Beta } from './views/beta/Beta';
-import { Header } from './components/app/Header';
+import { Header } from './components/header/Header';
 import './styles/global.css';
 import './styles/reset.css';
 

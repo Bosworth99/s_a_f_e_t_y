@@ -1,25 +1,23 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { createRoot } from 'react-dom/client';
-import { Canvas, useFrame } from '@react-three/fiber';
+import React from 'react';
+import * as THREE from 'three';
+import { extend } from '@react-three/fiber';
 
-// import { Sphere } from '../../components/sphere/Sphere';
+import { Context } from '../../components/context/Context';
 import { Alpha as StyledAlpha } from './Alpha.styled';
+import { Sphere } from '../../components/sphere/Sphere';
+
+extend({ THREE });
 
 export const Alpha: React.FC = () => {
-  let ctx;
-  const el = document.getElementById('ctx');
-
-  useEffect(() => {
-    if (el) {
-      ctx = createRoot(el);
-      ctx.render(
-        <Canvas>
-          <ambientLight />
-          <pointLight position={[10, 10, 10]} />
-        </Canvas>,
-      );
-    }
-  }, [el]);
-
-  return <StyledAlpha>ALPHA</StyledAlpha>;
+  console.log('Alpha');
+  return (
+    <StyledAlpha>
+      <Context>
+        {/** @react-three objs*/}
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Sphere />
+      </Context>
+    </StyledAlpha>
+  );
 };

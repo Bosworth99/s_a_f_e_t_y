@@ -6,16 +6,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
-  },
   mode: 'development',
   module: {
     rules: [
       {
         test: /\.(js|ts)x?$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'ts-loader'],
+        use: ['ts-loader'],
       },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
     ],

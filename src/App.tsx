@@ -1,22 +1,23 @@
-import React, { type FC, useEffect } from 'react';
+import React, { type FC } from 'react';
 import { createPortal } from 'react-dom';
-import './styles/reset.css';
-import './styles/global.css';
-import { Header } from './components/app/Header';
+import {
+  App as StyledApp,
+  ViewContainer as StyledViewContainer,
+} from './App.styled';
 import { Alpha } from './views/alpha/Alpha';
-import { App as StyledApp } from './App.styled';
+import { Beta } from './views/beta/Beta';
+import { Header } from './components/app/Header';
+import './styles/global.css';
+import './styles/reset.css';
 
 const App: FC = () => {
-  useEffect(() => {
-    console.log('hello world');
-  }, []);
-
   const overlay: Element = document.getElementById('overlay') as Element;
-
   return (
     <StyledApp>
       {createPortal(<Header />, overlay)}
-      <Alpha />
+      <StyledViewContainer>
+        <Alpha />
+      </StyledViewContainer>
     </StyledApp>
   );
 };

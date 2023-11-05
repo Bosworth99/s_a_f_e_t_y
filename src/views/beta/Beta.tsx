@@ -3,11 +3,11 @@ import { Canvas } from '@react-three/fiber';
 import { Physics } from '@react-three/rapier';
 import React from 'react';
 import * as THREE from 'three';
-import { SphereRigid } from '../../components/sphere/SphereRigid';
-import { Walls } from '../../components/wallss/Walls';
 import { Player } from '../../components/player/Player';
-import { useKeyboard } from '../../hooks/useKeyboard';
+import { SphereRigid } from '../../components/sphere/SphereRigid';
+import { Walls } from '../../components/walls/Walls';
 import { useMouseCapture } from '../../hooks';
+import { useKeyboard } from '../../hooks/useKeyboard';
 import { getInput } from '../../utils';
 
 export const Beta: React.FC = () => {

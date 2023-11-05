@@ -292,6 +292,11 @@
     three-stdlib "2.23.9"
     use-asset "1.0.4"
 
+"@remix-run/router@1.11.0":
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.11.0.tgz#e0e45ac3fff9d8a126916f166809825537e9f955"
+  integrity sha512-BHdhcWgeiudl91HvVa2wxqZjSHbheSgIiDvxrF1VjFzBzpTtuDPkOdOi3Iqvc08kXtFkLjhbS+ML9aM8mJS+wQ==
+
 "@types/body-parser@*":
   version "1.19.4"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.19.4.tgz#78ad68f1f79eb851aa3634db0c7f57f6f601b462"
@@ -427,10 +432,10 @@
   resolved "https://registry.yarnpkg.com/@types/offscreencanvas/-/offscreencanvas-2019.7.2.tgz#0b518a609c34d58f06c76fdf3b536ad2643e1eca"
   integrity sha512-ujCjOxeA07IbEBQYAkoOI+XFw5sT3nhWJ/xZfPR6reJppDG7iPQPZacQiLTtWH1b3a2NYXWlxvYqa40y/LAixQ==
 
-"@types/p5@^1.7.1":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@types/p5/-/p5-1.7.1.tgz#e294eaf28c154f6e2472ee2d202b8da88596521b"
-  integrity sha512-pnKfjUZBsOSxt19ZOmvn8VvBX2vQXG4I2yQ2TVNcf0s65xWKy/nKu2C2ByfaYuXNTeywQHJ98QKBKWSQikD7fA==
+"@types/p5@^1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@types/p5/-/p5-1.7.2.tgz#50f3dfbe639d516a02cb5d0e3679cd079cf156a7"
+  integrity sha512-39WkTu/2aQyYVSyBEIZb7XTE6t1sZtHskes4ZOlilY5hqWKR+xlx5VUWS66QE2EORJWYLiHfaPcEQCfDIdlWaA==
 
 "@types/prop-types@*":
   version "15.7.9"
@@ -3317,6 +3322,21 @@ react-reconciler@^0.27.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.21.0"
+
+react-router-dom@^6.18.0:
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.18.0.tgz#0a50c167209d6e7bd2ed9de200a6579ea4fb1dca"
+  integrity sha512-Ubrue4+Ercc/BoDkFQfc6og5zRQ4A8YxSO3Knsne+eRbZ+IepAsK249XBH/XaFuOYOYr3L3r13CXTLvYt5JDjw==
+  dependencies:
+    "@remix-run/router" "1.11.0"
+    react-router "6.18.0"
+
+react-router@6.18.0:
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.18.0.tgz#32e2bedc318e095a48763b5ed7758e54034cd36a"
+  integrity sha512-vk2y7Dsy8wI02eRRaRmOs9g2o+aE72YCx5q9VasT1N9v+lrdB79tIqrjMfByHiY5+6aYkH2rUa5X839nwWGPDg==
+  dependencies:
+    "@remix-run/router" "1.11.0"
 
 react-use-measure@^2.1.1:
   version "2.1.1"

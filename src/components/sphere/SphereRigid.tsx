@@ -11,11 +11,11 @@ export const SphereRigid = (
       colliders={'ball'}
       position={props.position}
       friction={1}
-      restitution={0.5}
+      restitution={0.8}
     >
       <mesh {...props} ref={ref} scale={1}>
-        <sphereGeometry args={[1.5, 24, 24, 8]} />
-        <meshNormalMaterial />
+        <sphereGeometry args={[1, 18, 18, 8]} />
+        <meshLambertMaterial reflectivity={0.2} />
       </mesh>
     </RigidBody>
   );

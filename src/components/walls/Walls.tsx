@@ -58,7 +58,7 @@ export const Walls = (
         >
           <mesh receiveShadow>
             <planeGeometry args={[100, 100, 10, 10]} />
-            <meshPhongMaterial color={'lightyellow'} />
+            <meshPhongMaterial color={'red'} reflectivity={0.5} />
           </mesh>
         </RigidBody>
       </group>

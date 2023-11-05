@@ -16,8 +16,8 @@ export const Wall = (
       lockRotations
     >
       <mesh {...props} ref={ref} scale={1}>
-        <planeGeometry args={[100, 10, 10, 8]} />
-        <meshNormalMaterial side={THREE.DoubleSide} />
+        <planeGeometry args={[100, 50, 10, 8]} />
+        <meshPhysicalMaterial side={THREE.DoubleSide} />
       </mesh>
     </RigidBody>
   );

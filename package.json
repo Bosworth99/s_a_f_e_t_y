@@ -6,7 +6,9 @@
   "author": "Bosworth99 <josh@joshbosworth.com>",
   "license": "MIT",
   "dependencies": {
+    "@react-three/drei": "^9.88.11",
     "@react-three/fiber": "^8.15.8",
+    "@react-three/rapier": "^1.1.2",
     "@types/p5": "^1.7.1",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",

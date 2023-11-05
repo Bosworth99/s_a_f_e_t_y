@@ -23,23 +23,13 @@ export const Alpha: React.FC = () => {
     <StyledAlpha>
       <Canvas shadows={true} camera={camera}>
         <ambientLight intensity={0.2} color={'#ffffff'} />
-        <spotLight
-          position={[0, -5, 0]}
-          angle={0.6}
-          penumbra={1}
-          intensity={0.99}
-          scale={2}
-        />
-        <pointLight position={[2, 0, 2]} color={'red'} scale={10} />
-        <pointLight
-          position={[-2, 0, 2]}
-          color={'yellow'}
-          intensity={1.0}
-          scale={10}
-        />
-        <Sphere position={[-2, 0, 0]} />
-        <Cube position={[2, 0, 0]} />
-        <Plane position={[0, -50, 0]} />
+        <spotLight position={[0, -5, 0]} angle={0.6} penumbra={1} />
+        <pointLight position={[2, 0, 2]} />
+        <pointLight position={[-2, 0, 2]} />
+        <pointLight position={[0, 0, 2]} />
+        <Sphere position={[-3, 0, 0]} />
+        <Cube position={[3, 0, 0]} />
+        <Plane position={[0, -50, -2]} />
       </Canvas>
     </StyledAlpha>
   );

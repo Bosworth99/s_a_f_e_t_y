@@ -20,12 +20,12 @@ export const Sphere = (
     <mesh
       {...props}
       ref={ref}
-      scale={clicked ? 1.5 : 1}
+      scale={clicked ? 2.5 : 2}
       onClick={(event) => click(!clicked)}
       onPointerOver={(event) => hover(true)}
       onPointerOut={(event) => hover(false)}
     >
-      <sphereGeometry args={[1, 14, 14]} />
+      <sphereGeometry args={[1, 30, 30]} />
       <meshPhongMaterial color={hovered ? 'red' : 'blue'} reflectivity={0.99} />
     </mesh>
   );

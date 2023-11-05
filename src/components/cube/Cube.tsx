@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
-import { useFrame, extend, ThreeElements, NodeProps } from '@react-three/fiber';
+import { useFrame, extend, ThreeElements } from '@react-three/fiber';
 import * as THREE from 'three';
 
-export const Sphere = (
+export const Cube = (
   props: JSX.IntrinsicElements['mesh'],
 ): React.JSX.Element => {
   // This reference will give us direct access to the THREE.Mesh object
@@ -25,8 +25,8 @@ export const Sphere = (
       onPointerOver={(event) => hover(true)}
       onPointerOut={(event) => hover(false)}
     >
-      <sphereGeometry args={[1, 14, 14]} />
-      <meshPhongMaterial color={hovered ? 'red' : 'blue'} reflectivity={0.99} />
+      <boxGeometry args={[1, 2, 2, 5, 5]} />
+      <meshPhongMaterial color={hovered ? 'red' : 'blue'} />
     </mesh>
   );
 };

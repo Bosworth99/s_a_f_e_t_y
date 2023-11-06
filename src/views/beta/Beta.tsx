@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { Physics } from '@react-three/rapier';
 import React from 'react';
 import * as THREE from 'three';
-import { Player } from '../../components/player/Player';
+import { PlayerFPS } from '../../components/player/PlayerFPS';
 import { SphereRigid } from '../../components/sphere/SphereRigid';
 import { Walls } from '../../components/walls/Walls';
 import { useMouseCapture } from '../../hooks';
@@ -35,7 +35,7 @@ export const Beta: React.FC = () => {
           <pointLight position={[-2, 0, 2]} color={'red'} />
           <SphereRigid position={[1, 4, 0]} />
           <SphereRigid position={[-1, 2, 0]} />
-          <Player
+          <PlayerFPS
             position={[0, 0, 0]}
             walk={3}
             jump={2}

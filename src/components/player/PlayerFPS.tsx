@@ -10,13 +10,13 @@ export interface PlayerInput {
   running: boolean;
 }
 
-interface PlayerProps extends Partial<JSX.IntrinsicElements['mesh']> {
+interface PlayerFPSProps extends Partial<JSX.IntrinsicElements['mesh']> {
   walk: number;
   jump: number;
   input: () => PlayerInput;
 }
 
-export const Player = (props: PlayerProps): React.JSX.Element => {
+export const PlayerFPS = (props: PlayerFPSProps): React.JSX.Element => {
   const api = useRef(null);
   const mesh = useRef<THREE.Mesh>(null!);
   const { walk, jump, input } = props;

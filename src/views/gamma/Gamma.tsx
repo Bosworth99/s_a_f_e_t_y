@@ -1,9 +1,9 @@
 import { Environment } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { Physics } from '@react-three/rapier';
 import React from 'react';
 import * as THREE from 'three';
-import { PlayerFPSControls } from '../../components/player/PlayerFPSControls';
+import { Player, PlayerFPSControls } from '../../components/player';
 import { SphereRigid } from '../../components/sphere/SphereRigid';
 import { Walls } from '../../components/walls/Walls';
 import { randomize } from '../../utils';
@@ -11,7 +11,10 @@ import { randomize } from '../../utils';
 export const Gamma: React.FC = () => {
   console.log('Gamma View');
 
-  // CAMERA
+  // Player
+  const player = <Player />;
+
+  // Camera
   const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
@@ -19,7 +22,7 @@ export const Gamma: React.FC = () => {
     500,
   );
   camera.position.set(0, 10, 20);
-  // camera.lookAt(0, 0, 0);
+  camera.lookAt(0, 0, 0);
 
   const num = 25;
   const spheres = (count: number = 5) => {
@@ -47,15 +50,18 @@ export const Gamma: React.FC = () => {
     });
   };
 
+  useFrame(() => {});
+
   return (
     <Canvas shadows={true} camera={camera}>
       <Physics debug>
-        <PlayerFPSControls camera={camera} />
         <group>
           <ambientLight intensity={0.2} color={'#ffffff'} />
           {lights(25)}
           {spheres(50)}
           <Walls />
+          {player}
+          <PlayerFPSControls camera={camera} />
         </group>
       </Physics>
       <Environment preset={'forest'} background />

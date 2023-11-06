@@ -1,15 +1,5 @@
 import * as THREE from 'three';
-import { PlayerInput } from 'components/player/Player';
-
-// Function to convert an angle from degrees to radians
-export const angleToRadians = (angleInDeg: number) =>
-  (Math.PI / 180) * angleInDeg;
-
-export const randomize = (min: number, max: number): number => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+import { PlayerInput } from '../components/player';
 
 export const getInput = (
   keyboard: Record<string, boolean>,
